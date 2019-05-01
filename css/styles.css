@@ -1,0 +1,74 @@
+/* Note: backdrop-filter has minimal browser support */
+
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
+a {
+    text-decoration: none
+}
+
+.body_bg {
+    /* Body Background Image */
+    background: url(../images/background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logo {
+    /* Branding Logo */
+    position: absolute;
+    right: 20%;
+    top: 30%;
+}
+
+.title {
+    /* Title */
+    position: absolute;
+    right: 20%;
+    top: 40%;
+    font-family: 'Allura', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 90px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+}
+
+.caption {
+    /* Caption */
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    font-family: Allura;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+}
+
+.socials {
+    /* Socials Info */
+    position: absolute;
+    right: 20%;
+    top: 60%;
+}
+
+.img_rounded {
+    /* Social Images Effect*/
+    border-radius: 50px;
+    color: #000000;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+}
