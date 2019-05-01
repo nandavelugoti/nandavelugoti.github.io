@@ -4,7 +4,7 @@
 
 ### Site mock up
 
-![alt text](screenshots/site.svg "A portfolio site for Nanda Velugoti")
+[![nandavelugoti.github.io](screenshots/site.svg "A portfolio site for Nanda Velugoti")](https://nandavelugoti.github.io)
 
 ### Figma Project
 
