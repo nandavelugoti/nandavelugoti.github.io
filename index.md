@@ -8,11 +8,7 @@ title: Nanda - Home
 
 *Greetings there, fellow living being! [Unless...](/images/robots.png)*
 
-## Bio
-I am Nanda Velugoti, a Computer Science PhD student at [Illinois Tech](cs.iit.edu) and Research Assistant at [HExSA Lab](https://www.halek.co/#people).
-
-## Research
-TBA
+I am Nanda Velugoti, a Computer Science PhD student at [Illinois Tech](cs.iit.edu) and Research Assistant at [HExSA Lab](https://www.halek.co/#people). I am currenty advised by [Dr. Kyle Hale](https://www.halek.co/).
 
 # Publications
 TBA
