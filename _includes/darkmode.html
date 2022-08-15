@@ -1,0 +1,45 @@
+<a class="dark-mode-button">
+    <i class="svg-icon darkmode"></i>
+</a>
+
+<script>
+    const DARK_MODE_QUERY = '(prefers-color-scheme: dark)'
+    const DARK_CLASS = 'dark'
+    var html = document.getElementsByTagName('html')[0].classList
+    var i = document.getElementsByTagName('i')[0].classList
+
+    function enable() {
+        html.add(DARK_CLASS);
+        i.add(DARK_CLASS);
+        localStorage.setItem('dark-mode', 'true');
+    }
+
+    function disable() {
+        // DarkReader.disable();
+        html.remove(DARK_CLASS);
+        i.remove(DARK_CLASS);
+        localStorage.setItem('dark-mode', 'false');
+    }
+
+    function darkmode() {
+        let enabled = localStorage.getItem('dark-mode')
+
+        if (enabled === null) {
+            if (window.matchMedia && window.matchMedia(DARK_MODE_QUERY).matches) {
+                enable();
+            }
+        } else if (enabled === 'true') {
+            enable()
+        }
+
+        if (localStorage.getItem('dark-mode') === 'false') {
+            enable();
+        } else {
+            disable();
+        }
+    }
+
+    document.getElementsByClassName('dark-mode-button')[0].onclick = function () {
+        darkmode()
+    }
+</script>
