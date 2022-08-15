@@ -21,7 +21,15 @@
         localStorage.setItem('dark-mode', 'false');
     }
 
-    function darkmode() {
+    function toggle() {
+        if (localStorage.getItem('dark-mode') === 'false') {
+            enable();
+        } else {
+            disable();
+        }
+    }
+
+    function init_dark_mode() {
         let enabled = localStorage.getItem('dark-mode')
 
         if (enabled === null) {
@@ -31,15 +39,9 @@
         } else if (enabled === 'true') {
             enable()
         }
-
-        if (localStorage.getItem('dark-mode') === 'false') {
-            enable();
-        } else {
-            disable();
-        }
     }
 
-    document.getElementsByClassName('dark-mode-button')[0].onclick = function () {
-        darkmode()
-    }
+    document.getElementsByClassName('dark-mode-button')[0].onclick = toggle
+    
+    init_dark_mode()
 </script>
