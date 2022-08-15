@@ -9,31 +9,30 @@
     var i = document.getElementsByTagName('i')[0].classList
 
     function enable() {
-        html.add(DARK_CLASS);
-        i.add(DARK_CLASS);
-        localStorage.setItem('dark-mode', 'true');
+        html.add(DARK_CLASS)
+        i.add(DARK_CLASS)
+        localStorage.setItem('dark-mode', 'true')
     }
 
     function disable() {
-        // DarkReader.disable();
-        html.remove(DARK_CLASS);
-        i.remove(DARK_CLASS);
-        localStorage.setItem('dark-mode', 'false');
+        html.remove(DARK_CLASS)
+        i.remove(DARK_CLASS)
+        localStorage.setItem('dark-mode', 'false')
     }
 
     function toggle() {
         if (localStorage.getItem('dark-mode') === 'false') {
-            enable();
+            enable()
         } else {
-            disable();
+            disable()
         }
     }
 
     function init_dark_mode() {
         let enabled = localStorage.getItem('dark-mode')
 
-        if (enabled === null || enabled === 'true') {
-            enable();
+        if (enabled === 'true') {
+            enable()
         } else {
             disable()
         }
