@@ -32,16 +32,16 @@
     function init_dark_mode() {
         let enabled = localStorage.getItem('dark-mode')
 
-        if (enabled === null) {
-            if (window.matchMedia && window.matchMedia(DARK_MODE_QUERY).matches) {
-                enable();
-            }
-        } else if (enabled === 'true') {
-            enable()
+        if (enabled === null || 
+            window.matchMedia && window.matchMedia(DARK_MODE_QUERY).matches || 
+            enabled === 'true') {
+            enable();
+        } else {
+            disable()
         }
     }
 
     document.getElementsByClassName('dark-mode-button')[0].onclick = toggle
-    
+
     init_dark_mode()
 </script>
