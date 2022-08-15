@@ -4,9 +4,9 @@ title: Nanda Velugoti
 ---
 
 # About Me
-![Display Picture]({{ site.avatar }})
+![Display Picture]({{ site.baseurl }}/images/avatar.jpeg)
 
-*Hello there* 👋 *, fellow living being!* [*Unless*...](/images/robots.png)😧
+> *Hello there* 👋 *, fellow living being!* [*Unless*...](/images/robots.png) 😧
 
 I am Nanda Velugoti, a 2nd year Computer Science PhD student at [Illinois Tech](cs.iit.edu) and Research Assistant at [HExSA Lab](https://www.halek.co/#people). I am advised by [Dr. Kyle Hale](https://www.halek.co/). I am also a PhD Intern (part-time) at [Pacific Northwest National Laboratory](https://www.pnnl.gov) working as part the HPC Group lead by [Dr. Nathan Tallent](https://hpc.pnnl.gov/people/tallent/).
 
@@ -17,4 +17,4 @@ I initially worked as a software development engineer for 3 years at [Temenos](h
 
 # Publications
 
-coming soon 🙂.
+> Coming soon... 🙂
