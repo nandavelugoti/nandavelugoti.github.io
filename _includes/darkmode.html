@@ -32,9 +32,7 @@
     function init_dark_mode() {
         let enabled = localStorage.getItem('dark-mode')
 
-        if (enabled === null || 
-            window.matchMedia && window.matchMedia(DARK_MODE_QUERY).matches || 
-            enabled === 'true') {
+        if (enabled === null || enabled === 'true') {
             enable();
         } else {
             disable()
