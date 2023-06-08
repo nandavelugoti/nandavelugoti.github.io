@@ -1,0 +1,2 @@
+Predicting and Alleviating bottlenecks in Hybrid CPU and Memory Architectures
+*[GCASR '23](https://gcasr.org/posters), Illinois Tech, Chicago.* [![PDF](https://img.shields.io/badge/PDF-2ea44f)](resources/posters/GCASR_23_Poster.pdf){:target="_blank"}
