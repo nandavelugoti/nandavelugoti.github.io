@@ -8,12 +8,12 @@ html {
     }
 
     &.dark {
-        background-color: $navy;
+        background-color: $black;
         color: $white-500;
 
         body,
         .page__footer {
-            background-color: $navy;
+            background-color: $black;
             color: $white-500;
         }
 
