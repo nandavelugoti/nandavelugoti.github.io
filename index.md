@@ -4,7 +4,7 @@ title: Nanda Velugoti
 ---
 
 # About Me
-![Display Picture]({{ site.baseurl }}/images/avatar.jpeg)
+![Display Picture]({{ site.baseurl }}/images/avatar.jpeg){:style="border-radius:2%"}
 
 > *Hello there* 👋 *, fellow living being!* [*Unless*...](/images/robots.png) 😧
 
@@ -13,7 +13,6 @@ I am Nanda Velugoti, a 2nd year Computer Science PhD student at [Illinois Tech](
 My research interests are Systems and HPC (High Performance Computing) areas in Computer Science. I like researching on hardware/software components (memory, storage, cpu, os, etc) in computing systems and propose solutions to help improve overall system performance optimized for specific workloads. I am currently working on concurrency aware memory analysis of parallel applications on heterogeneous architectures.
 
 I initially worked as a software development engineer for 3 years at [Temenos](https://www.temenos.com) (formerly [Kony Labs](https://www.temenos.com/news/2020/10/16/kony-is-now-temenos/)) in Hyderabad, India. I moved to US to pursue my research studies at [Illinois Tech](cs.iit.edu). I started out as a Masters student (graduated 2021) and currently continuing as a PhD student since 2021. For more details checkout my [CV](resources/CV.pdf){:target="_blank"}.
-
 
 # Posters
 
