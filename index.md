@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nanda Velugoti
+title: Nanda
 ---
 
 # About Me
