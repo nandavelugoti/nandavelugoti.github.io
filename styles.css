@@ -47,6 +47,12 @@
   display: flex;
   justify-content: flex-end;
   border: 2px solid black;
+  padding: 10px;
+}
+
+td {
+  padding-left: 20px;
+  text-align: left;
 }
 
 body {
@@ -54,6 +60,7 @@ body {
   width: 100vw;
   height: 98vh;
   font-size: large;
+  font-family: system-ui;
 }
 
 img {
@@ -61,10 +68,9 @@ img {
   height: auto;
 }
 
-
 @media (orientation: portrait) {
   .left-pane {
-    width: 100%;
+    width: 98%;
     height: auto;
     align-items: center;
     border-right: none;
@@ -72,16 +78,18 @@ img {
     overflow-y: scroll;
   } 
   .right-pane {
-    width: 100%;
+    width: 98%;
   }
   .links {
     justify-content: center;
   }
   .links > * {
     margin-left: 10px;
+    margin-right: 10px;
   }
   .index > * {
     margin-left: 10px;
+    margin-right: 10px;
   }
   .index {
     flex-direction: row;
@@ -94,7 +102,7 @@ img {
     display: none;
   }
   img {
-    width: 75%;
+    width: 50%;
   }
   body {
     flex-direction: column;

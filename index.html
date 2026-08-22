@@ -13,48 +13,48 @@
       <img src="personal-photo.jpeg" />
       <h1>Nanda Velugoti</h1>
       <div class="abstract">
-        CS PhD Candidate at <a href="https://oregonstate.edu">OSU</a><br>
-        Researcher at <a href="https://hipcastor.engr.oregonstate.edu/">HiPCastor Lab</a><br>
+        CS PhD Student at <a href="https://oregonstate.edu">OSU</a><br>
+        Researcher at <a href="https://www.halek.co/lab/">HExSA Lab</a> and
+        <a href="https://hipcastor.engr.oregonstate.edu/">HiPCastor Lab</a><br>
         Email: <a href="mailto:velugotn@oregonstate.edu">velugotn@oregonstate.edu</a><br>
       </div>
       <div class="links">
-        <a href=""> Github </a>
-        <a href=""> Scholar </a>
-        <a href=""> CV </a>
-        <a href=""> X </a>
+        [<a href="https://github.com/nandavelugoti">GitHub</a>]
+        [<a href="https://scholar.google.com/citations?user=jf3YqHMAAAAJ&hl=en&oi=ao">Scholar</a>]
+        [<a href="./assets/CV.pdf">CV</a>]
       </div>
       <div class="index">
         <a href="#bio"> Bio </a>
         <a href="#news"> News </a>
         <a href="#projects"> Projects </a>
-        <a href="#publicatoins"> Publications </a>
+        <a href="#publications"> Publications </a>
         <a href="#posters"> Posters </a>
-        <a href="#teaching"> Teaching </a>
         <a href="#blog"> Blog </a>
       </div>
       <div class='xkcd' id='xkcd-embed'></div>
     </div>
 
     <div class="right-pane">
-      <i><b>Hello there! I am Nanda Velugoti and welcome to my world. Enjoy your stay.</b></i>
-      <i>Page last updated: Tue Jul 7 09:41:20 PM UTC 2026 </i>
+      <i><b>Hello there! I am Nanda and welcome to my website. Feel free to click around, read a comic
+          perhaps. Enjoy your stay!</b></i>
+      <i><u>Page last updated:</u> Sat Aug 22 07:16:35 AM UTC 2026</i>
       <div id="bio">
         <h1>Bio</h1>
         <p>
-          I am a 2<sup>nd</sup> year Computer Science PhD candidate and a Gradudate Research 
+          I am a second year Computer Science PhD student and a Gradudate Research 
           Assitant at <a href="https://oregonstate.edu">Oregon State University</a>. My interest is
           in HPC systems research to explore memory characterization, power efficiency and 
           performance improvements in high performance workloads. I am advised by 
           <a href="https://halek.co">Dr. Kyle Hale</a> and I work with folks at 
           <a href="https://www.halek.co/lab/">HExSA Lab</a> and 
           <a href="https://hipcastor.engr.oregonstate.edu/">HiPCastor Lab</a> at OSU. 
-          A also collaborate with <a href="https://nathantallent.github.io/">Dr. Nathan Tallent</a> 
+          I also collaborate with <a href="https://nathantallent.github.io/">Dr. Nathan Tallent</a> 
           at <a href="https://www.pnnl.gov/">Pacific  Northwest National Lab</a>.
         </p>
 
         <p>
           I received my Masters degree (class of 2021) at 
-          <a href"https://www.iit.edu/">Illinois Tech</a> under the
+          <a href="https://www.iit.edu/">Illinois Tech</a> under the
           supervision of Dr. Hale and started my PhD there, before transfering to OSU.
           Before my Masters I worked as a software development engineer for 3 years at 
           <a href="https://www.temenos.com/">Temenos (formerly Kony Labs)</a> in Hyderabad, India.
@@ -62,24 +62,43 @@
       </div>
       <div id="news">
         <h1>News</h1>
+        <table>
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Aug 05, 2026</b></td>
+              <td>Submitted <b>CURATE</b> paper to <b>WORKS '26</b>.</td>
+            </tr>
+            <tr>
+              <td><b>Jul 13, 2026</b></td>
+              <td>Visiting Seattle, WA to attend <b>OSDI '26</b> conference.</td>
+            </tr>
+            <tr>
+              <td><b>Jul 06, 2026</b></td>
+              <td><b>MEMPOWER</b> paper accepted to <b>CLUSTER '26</b>! <span>&#x1F389;</span></td>
+            </tr>
+            <tr>
+              <td><b>Jun 28, 2026</b></td>
+              <td>Mentoring HExSA Lab REU students over the Summer.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div id="projects"> 
         <h1>Projects</h1>
 
-        <p>
-          <b>MemPower:</b>
+        <b><u>Hybrid CPU Evaluation:</u></b> To explore the effects and impact of hybrid core and cache architecture
+          on the performance of highly parallel HPC workloads, this project evaluates various multi-threaded HPC
+          workloads on Intel Alderlake hybrid cores. This project also explores the impact of hybrid cache architecture
+          on parallel shared-data HPC applications. Key take aways from this evaluation: 1) parallel applications with
+          work imbalance (i.e., threads in application perform different amount of work) scale better across hybrid
+          cores when thread affinity is disabled and 2) hybrid cache architecture has very little impact on parallel
+          shared-data applications except for some workloads with locks.
         </p>
 
         <p>
-          <b>PIM Offloading:</b>
-        </p>
-        
-        <p>
-          <b>Hybrid CPU Evaluation:</b>
-        </p>
-
-        <p>
-          <b>P2P Distributed Task Orchestrator:</b> The goal of this project is to build a framework to enable
+        <b><u>P2P Distributed Task Orchestrator:</u></b> The goal of this project is to build a framework to enable
           distributed task execution environment on a P2P (Peer-to-Peer) network. The basic idea is that in a P2P
           network, each node acts as a <i>task submitter</i> and a <i>task executor</i>. We define a <i>task</i> to be
           a JRE (Java Runtime Environment) Thread and it contains all the required state for the task. Each node in the
@@ -87,29 +106,31 @@
           algorithm to distribute tasks among rest of the nodes (including itself). The <i>leader</i> is elected by an
           election process at the begining of network setup or if the <i>leader</i> experiences a crash stop (initiated
           by other nodes in the network).
+          [<a href="https://github.com/nandavelugoti/p2p-task-runtime.git">code</a>]
         </p>
 
         <p>
-          <b>Remote Memory Pool:</b> In order to enable remote memory for userspace applications, existing
+        <b><u>Remote Memory Pool:</u></b> In order to enable remote memory for userspace applications, existing
           far/disagregated memory techniques utilize the operating system's pagefault mechanism to alloc/send/recv pages
           on a remote memory node. However, the pagefault mechanism requires previledge escalation and comes with a
           performance overhead. The idea of this project is to utilize the Linux kernel's userfaultfd mechanism, which
-          works entirely in the userspace, to send/recv pages to/from a remote node.
+          works entirely in the userspace, to send/recv pages to/from a remote node. 
+          [<a href="https://github.com/nandavelugoti/rmpool.git">code</a>]
         </p>
 
         <p>
-        <b>Provenance:</b> As part of my summer research project, I implemented a logging/debugging tool,
+        <b><u>Provenance:</u></b> As part of my summer research project, I implemented a logging/debugging tool,
           <i>Provenance</i>, to monitor kernel events for 
           <a href="https://github.com/HExSA-Lab/nautilus">Nautilus AeroKernel</a> which is part of
           the <a href="https://interweaving.org/">Interweaving Project</a>.
         </p>
 
         <p>
-          <b>ISA for Dataflow Machines:</b> Many real-world machines 
+        <b><u>ISA for Dataflow Machines:</u></b> Many real-world machines 
           (<a href="https://www.sciencedirect.com/science/article/pii/0010465585901353">Manchester Dataflow Machine</a>)
           and execution models (<a href="https://ieeexplore.ieee.org/document/48862">Tagged-token</a>) were proposed to 
           run dataflow programs. The goal of this project is to desgin a novel ISA
-          (Instruction Set Architecture) such that users can program dataflow programs. The basic idea is that the
+          (Instruction Set Architecture) such that users can develop dataflow programs. The basic idea is that the
           dataflow program is represented as a graph where nodes represent an <i>instruction</i> (e.g. ADD, SUB, MUL,
           etc), ingress edges represent input <i>operands</i> and egress edge represents the computed <i>result</i> 
           value.
@@ -117,18 +138,67 @@
       </div>
       <div id="publications"> 
         <h1>Publications</h1>
+        <p>
+          <b>MEMPOWER: Efficient Power Management with Fine-grained Memory Analysis and Modeling for HPC
+          Workloads</b>
+          <br/>
+          <i><b><u>Nanda Velugoti</u></b>, Joseph Manzano, Andres Marquez, Nathan Tallent, Kyle C. Hale</i>
+          <br/>
+          [<a href="">paper</a>]
+          [<a href="">slides</a>]
+          [<a href="">code</a>]
+          <b>[<i>CLUSTER '26</i>]</b>
+          (<i>To be appeared</i>)
+        </p>
+        
+        <p>
+          <b>CURATE: Leveraging LLM Agents to Compose, Catalog, and Deploy Reproducible Workflows</b>
+          <br/>
+          <i>Nolan Cutler, Laura Kuo, <b><u>Nanda Velugoti</u></b>, Kathryn Newhart, Renato Figueiredo</i>
+          <br/>
+          [<a href="">paper</a>]
+          [<a href="">slides</a>]
+          [<a href="">code</a>]
+          <b>[<i>SC Workshops '26</i>]</b>
+          (<i>Under review</i>)
+        </p>
       </div>
       <div id="posters"> 
         <h1>Posters</h1>
-        <p>PIM+Globus</p>
-        <p>VMM+Globus</p>
-        <p>GCASR</p>
-      </div>
-      <div id="teaching"> 
-        <h1>Teaching</h1>
+        <p>
+          <b>Exploring Fine-grained Memory Analysis for PIM Offloading</b>
+          <br/>
+          <i>Thomas M. Papka, <b><u>Nanda Velugoti</u></b>, Kyle C. Hale</i>
+          <br/>
+          [<a href="">poster</a>]
+          [<a href="">report</a>]
+          [<a href="">code</a>]
+          <b>[<i>SC '24</i>]</b>
+        </p>
+        <p>
+          <b>Memory Disaggregation in Serverless Computing</b>
+          <br/>
+          <i>Joshua Lowe, <b><u>Nanda Velugoti</u></b>, Kyle C. Hale</i>
+          <br/>
+          [<a href="">poster</a>]
+          [<a href="">report</a>]
+          [<a href="">code</a>]
+          <b>[<i>SC '24</i>]</b>
+        </p>
+        <p>
+          <b>Predicting and alleviating bottlenecks in Hybrid CPU and Memory Architectures</b>
+          <br/>
+          <i><b><u>Nanda Velugoti</u></b>, Joseph Manzano, Nathan Tallent, Kyle C. Hale</i>
+          <br/>
+          [<a href="">poster</a>]
+          [<a href="">report</a>]
+          [<a href="">code</a>]
+          <b>[<i>GCASR '23</i>]</b>
+        </p>
       </div>
       <div id="blog"> 
         <h1>Blog</h1>
+        Coming soon...
       </div>
     </div>
   </body>
