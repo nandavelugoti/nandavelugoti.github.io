@@ -5,7 +5,7 @@
   <head>
     <title>Nanda Velugoti</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel='stylesheet' href='http://xkcd-embedder.fahmidur.com/css/xkcd-embedder.css'/>
+    <script src="https://raw.githack.com/nandavelugoti/xkcd-embed/refs/heads/main/xkcd-embed.js"></script>
   </head>
 
   <body>
@@ -32,16 +32,17 @@
         <a href="#teaching"> Teaching </a>
         <a href="#blog"> Blog </a>
       </div>
-      <div class='xkcd-embed' data-id='latest'></div>
+      <div class='xkcd' id='xkcd-embed'></div>
     </div>
 
     <div class="right-pane">
-      <i>Hello there!</i>
+      <i><b>Hello there! I am Nanda Velugoti and welcome to my world. Enjoy your stay.</b></i>
+      <i>Page last updated: Tue Jul 7 09:41:20 PM UTC 2026 </i>
       <div id="bio">
         <h1>Bio</h1>
         <p>
           I am a 2<sup>nd</sup> year Computer Science PhD candidate and a Gradudate Research 
-          Assitantat <a href="https://oregonstate.edu">Oregon State University</a>. My interest is
+          Assitant at <a href="https://oregonstate.edu">Oregon State University</a>. My interest is
           in HPC systems research to explore memory characterization, power efficiency and 
           performance improvements in high performance workloads. I am advised by 
           <a href="https://halek.co">Dr. Kyle Hale</a> and I work with folks at 
@@ -66,19 +67,7 @@
         <h1>Projects</h1>
 
         <p>
-          <b>ISA for Dataflow Machines:</b>
-        </p>
-
-        <p>
-          <b>Remote Memory Pool:</b>
-        </p>
-
-        <p>
-          <b>Provenance:</b>
-        </p>
-
-        <p>
-          <b>P2P Distributed Task Orchestrator:</b>
+          <b>MemPower:</b>
         </p>
 
         <p>
@@ -90,7 +79,40 @@
         </p>
 
         <p>
-          <b>MemPower:</b>
+          <b>P2P Distributed Task Orchestrator:</b> The goal of this project is to build a framework to enable
+          distributed task execution environment on a P2P (Peer-to-Peer) network. The basic idea is that in a P2P
+          network, each node acts as a <i>task submitter</i> and a <i>task executor</i>. We define a <i>task</i> to be
+          a JRE (Java Runtime Environment) Thread and it contains all the required state for the task. Each node in the
+          network holds a list of <i>tasks</i> that need to be executed and a <i>leader</i> node uses a power-of-two
+          algorithm to distribute tasks among rest of the nodes (including itself). The <i>leader</i> is elected by an
+          election process at the begining of network setup or if the <i>leader</i> experiences a crash stop (initiated
+          by other nodes in the network).
+        </p>
+
+        <p>
+          <b>Remote Memory Pool:</b> In order to enable remote memory for userspace applications, existing
+          far/disagregated memory techniques utilize the operating system's pagefault mechanism to alloc/send/recv pages
+          on a remote memory node. However, the pagefault mechanism requires previledge escalation and comes with a
+          performance overhead. The idea of this project is to utilize the Linux kernel's userfaultfd mechanism, which
+          works entirely in the userspace, to send/recv pages to/from a remote node.
+        </p>
+
+        <p>
+        <b>Provenance:</b> As part of my summer research project, I implemented a logging/debugging tool,
+          <i>Provenance</i>, to monitor kernel events for 
+          <a href="https://github.com/HExSA-Lab/nautilus">Nautilus AeroKernel</a> which is part of
+          the <a href="https://interweaving.org/">Interweaving Project</a>.
+        </p>
+
+        <p>
+          <b>ISA for Dataflow Machines:</b> Many real-world machines 
+          (<a href="https://www.sciencedirect.com/science/article/pii/0010465585901353">Manchester Dataflow Machine</a>)
+          and execution models (<a href="https://ieeexplore.ieee.org/document/48862">Tagged-token</a>) were proposed to 
+          run dataflow programs. The goal of this project is to desgin a novel ISA
+          (Instruction Set Architecture) such that users can program dataflow programs. The basic idea is that the
+          dataflow program is represented as a graph where nodes represent an <i>instruction</i> (e.g. ADD, SUB, MUL,
+          etc), ingress edges represent input <i>operands</i> and egress edge represents the computed <i>result</i> 
+          value.
         </p>
       </div>
       <div id="publications"> 
@@ -109,7 +131,6 @@
         <h1>Blog</h1>
       </div>
     </div>
-    <script src='http://xkcd-embedder.fahmidur.com/js/xkcd-embedder.js'></script>
   </body>
 
 </html>
