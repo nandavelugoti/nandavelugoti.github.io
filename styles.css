@@ -55,18 +55,19 @@ td {
   text-align: left;
 }
 
-body {
-  display: flex;
-  width: 100vw;
-  height: 98vh;
-  font-size: large;
-  font-family: system-ui;
-}
-
 img {
   width: 100%;
   height: auto;
 }
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 98vh;
+  font-size: x-large;
+  font-family: system-ui;
+}
+
 
 @media (orientation: portrait) {
   .left-pane {
